@@ -1,5 +1,5 @@
 
-## Netflix GPT 
+## Netflix-AI-GPT 
 
     - Create React App using cmd  
     - Configured Tailwind Css in Netflix-AI-GPT Project
@@ -30,7 +30,7 @@
         - Movie Suggestion Bar 
             - Movie List *N 
 
-## Netflix GPT 
+## Netflix-AI-GPT 
     - Search Bar
     - Movie Suggestion 
     
