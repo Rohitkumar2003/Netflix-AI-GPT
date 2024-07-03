@@ -1,7 +1,11 @@
 import React from 'react'
-
+import Header from './Header'
  export const Browse = () => {
   return (
-    <div>You are Browser Page</div>
+ 
+      <div>
+        <Header/>
+      </div>
+
   )
 }
