@@ -3,14 +3,17 @@ import Header from "./Header";
 import { checkValidataionData } from "../utils/validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { auth } from "../utils/firebase"
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
+
+
 const Login = () => {
 
   const [isSignInForm, setSignInForm] = useState(true);
   const [erorMessage, seterorMessage] = useState(null)
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   const email = useRef(null);
@@ -39,7 +42,8 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://lh3.googleusercontent.com/a/ACg8ocKtTL6PDGBg36Irw_SWs-qQKXbNf2d80x7Z1VnV7YSKCjvf14z-=s288-c-no"
+            displayName: name.current.value,
+             photoURL:USER_AVATAR,
           }).then(() => {
 
             const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -51,8 +55,6 @@ const Login = () => {
                 photoURL: photoURL,
               })
             );
-
-            navigate("/Browse")
           }).catch((error) => {
             seterorMessage(error.message);
           });
@@ -72,8 +74,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          console.log("sign in: ", user);
-          navigate("/Browse")
 
         })
         .catch((error) => {
@@ -84,11 +84,10 @@ const Login = () => {
     }
   };
   return (
-    <div >
+    <div  className="">
       <Header />
-      <div className="absolute ">
-        <img className=""
-
+      <div className="absolute w-screen ">
+        <img className=" opacity-100 bg-gradient-to-tl bg-black"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/335ddde7-3955-499c-b4cc-ca2eb7e1ae71/a7d20bc1-831c-4f9d-8153-11bdf7a08d23/IN-en-20240624-POP_SIGNUP_TWO_WEEKS-perspective_WEB_13cda806-d858-493e-b4aa-f2792ff965dc_medium.jpg"
           alt="netflix-bg-banner" />
       </div>
@@ -114,6 +113,7 @@ const Login = () => {
           ref={password}
           placeholder="Password"
           className="p-2 my-4 w-full bg-gray-900"
+         
         />
 
         <p className="text-red-500 font-bold text-lg py-2">{erorMessage}</p>

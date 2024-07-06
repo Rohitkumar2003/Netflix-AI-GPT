@@ -1,10 +1,27 @@
 import React from 'react'
 import Header from './Header'
- export const Browse = () => {
-  return (
+import { useNowPlayingMovies } from '../hooks/useNowPlayingMovies'
+import { MainConatainer } from './MainContainer'
+import { SecondryConatainer } from './SecondryContainer'
  
-      <div>
+export const Browse = () => { 
+   useNowPlayingMovies()
+    return (
+      
+      <div >
         <Header/>
+        <MainConatainer/> 
+        <SecondryConatainer/>
+{/*
+    -- Main Container -- 
+        - video Background
+        - Video Title
+        
+    -- Secondry Container -- 
+        - Movie-List*N
+            - Cards * N
+         
+*/}
       </div>
 
   )
