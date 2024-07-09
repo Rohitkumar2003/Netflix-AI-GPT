@@ -5,12 +5,14 @@ export const LOGO =
  export const USER_AVATAR =
  "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTE6u8v55zrU0S9bhDunWB8CopXPALqXibzo5g5zfcy7Gw4-fZL"
 
- export const  API_OPTION =  {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YjZlNWQ4ZTYzNjYyY2NiYjYwMTEyNmI3ZjkyZDg2ZSIsIm5iZiI6MTcyMDExNDk2My40Nzk1NzgsInN1YiI6IjY2ODZkODhjZDkwZWZjN2Y5YzU4YWYzMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eVwiZEbiqhwaL0EM_rWQJQBFY0dPpf64vRWGh5UdXZk'
-    }
-  };
+ export const API_OPTION =   {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YjZlNWQ4ZTYzNjYyY2NiYjYwMTEyNmI3ZjkyZDg2ZSIsIm5iZiI6MTcyMDQxOTM0My4xMTc2MDQsInN1YiI6IjY2ODZkODhjZDkwZWZjN2Y5YzU4YWYzMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kkgt0fWN2rvl3EY8lw43lU1xyC-r5XnxPZcW8NFuMqk'
+  }
+};
+
+// export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
   

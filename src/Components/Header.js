@@ -49,7 +49,7 @@ const Header = () => {
                 src={LOGO}
                 alt="netflix-logo" />
 
-            {user && <div className="  ">
+            {user && <div className=" flex ">
                 <img className="w-12 h-12 mt-2  mr-2 rounded-sm"
                     src={user?.photoURL}
                     alt="user-icon"
