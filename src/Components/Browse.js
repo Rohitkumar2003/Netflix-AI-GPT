@@ -2,16 +2,23 @@
 import Header from './Header'
 import {useNowPlayingMovies} from "../hooks/useNowPlayingMovies"
 import MainContainer from "../Components/MainContainer"
+import SecondContainer from './SecondContainer';
+import { usePopularMovies } from '../hooks/usePopularMovies';
+
+
+
   
 export const Browse = () => { 
 
   useNowPlayingMovies();
+  usePopularMovies();
+
+  
     return (
       <div >
         <Header/>
-        <MainContainer/>
-        
-       
+        <MainContainer/>  
+        <SecondContainer/>
 {/*
     -- Main Container -- 
         - video Background
