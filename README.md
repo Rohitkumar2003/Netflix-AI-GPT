@@ -54,3 +54,6 @@
     - Search Bar
     - Movie Suggestion 
     
+
+
+    -- fixing 
